@@ -26,7 +26,12 @@ const App = () => {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    setSearch("");  
+    setSearch("");
+
+    if (isNaN(search) || search > 100 || search === ""){
+      alert('Must Input a Valid Id Number')
+      setSearch("")
+    }
   }
 
 
